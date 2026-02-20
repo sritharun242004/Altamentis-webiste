@@ -1,20 +1,6 @@
 import Link from "next/link";
-import { MapPin, Mail, Phone, Linkedin } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 import { AltamentisLogoWhite } from "./logo";
-
-// X (formerly Twitter) icon component
-function XIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
 
 export function Footer() {
   return (
@@ -52,10 +38,10 @@ export function Footer() {
               <div className="flex items-center space-x-3 text-white/90">
                 <Mail className="w-5 h-5 flex-shrink-0" />
                 <a
-                  href="mailto:admin@altamentis.in"
+                  href="mailto:info@altamentis.in"
                   className="hover:text-white transition-colors text-sm"
                 >
-                  admin@altamentis.in
+                  info@altamentis.in
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-white/90">
@@ -135,39 +121,17 @@ export function Footer() {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/sap-services"
-                  className="text-white/90 hover:text-white active:text-white/70 transition-colors text-sm block py-2 touch-manipulation"
-                >
-                  Case Studies
-                </Link>
-              </li>
             </ul>
 
             <div>
-              <h3 className="text-white font-bold mb-4 text-lg">Follow us on</h3>
+              <h3 className="text-white font-bold mb-4 text-lg">Get in touch</h3>
               <div className="flex space-x-3">
                 <a
-                  href="mailto:admin@altamentis.in"
+                  href="mailto:info@altamentis.in"
                   className="w-11 h-11 rounded-lg bg-white/20 hover:bg-white/30 active:bg-white/40 flex items-center justify-center transition-colors touch-manipulation"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-11 h-11 rounded-lg bg-white/20 hover:bg-white/30 active:bg-white/40 flex items-center justify-center transition-colors touch-manipulation"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href="#"
-                  className="w-11 h-11 rounded-lg bg-white/20 hover:bg-white/30 active:bg-white/40 flex items-center justify-center transition-colors touch-manipulation"
-                  aria-label="X (Twitter)"
-                >
-                  <XIcon className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="tel:+917200106280"
@@ -183,10 +147,10 @@ export function Footer() {
 
         <div className="border-t border-white/20 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
-            <Link href="#" className="text-white/90 hover:text-white transition-colors">
+            <Link href="/terms" className="text-white/90 hover:text-white transition-colors">
               Terms & Conditions
             </Link>
-            <Link href="#" className="text-white/90 hover:text-white transition-colors">
+            <Link href="/privacy" className="text-white/90 hover:text-white transition-colors">
               Privacy Policy
             </Link>
           </div>

@@ -280,7 +280,7 @@ export default function AboutPage() {
               and deliver lasting business value through disciplined transformation.
             </p>
             <a
-              href="https://cal.com/altamentis"
+              href="https://calendly.com/chandrus-altamentis/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-altamentis-sky text-white font-bold rounded-full px-6 md:px-8 py-3 md:py-4 text-sm md:text-base hover:shadow-[0_0_20px_rgba(68,204,228,0.4)] transition-all duration-300"

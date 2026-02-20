@@ -12,6 +12,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://altamentis.in'),
   title: {
     default: 'AltaMentis Technologies | SAP Excellence & Agentic AI',
     template: '%s | AltaMentis Technologies'
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     siteName: 'AltaMentis Technologies',
     images: [
       {
-        url: 'https://altamentis.in/og-image.png', // Ensure this image exists in public folder later
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'AltaMentis Technologies - SAP & Agentic AI'
@@ -49,8 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AltaMentis Technologies | SAP & Agentic AI',
     description: 'Bespoke SAP S/4HANA implementations met with the autonomous power of Agentic AI.',
-    creator: '@altamentis',
-    images: ['https://altamentis.in/og-image.png'],
+    images: ['/og-image.png'],
   },
   other: {
     'geo.region': 'IN-TN',

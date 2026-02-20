@@ -33,10 +33,53 @@ export default function ContactPage() {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone
+            ? `${formData.countryCode} ${formData.phone}`
+            : "",
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", countryCode: "+91", phone: "", message: "" });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: "Something went wrong. Please try again or email us directly.",
+        });
+      }
+    } catch {
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please check your connection and try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -98,10 +141,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-gray-900 font-semibold mb-1 text-sm md:text-base">Email</h3>
                     <a
-                      href="mailto:admin@altamentis.in"
+                      href="mailto:info@altamentis.in"
                       className="text-altamentis-sky hover:underline transition-colors text-sm md:text-base"
                     >
-                      admin@altamentis.in
+                      info@altamentis.in
                     </a>
                   </div>
                 </div>
@@ -257,11 +300,24 @@ export default function ContactPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-altamentis-sky text-white font-bold hover:shadow-[0_0_20px_rgba(68,204,228,0.4)] transition-all duration-300 h-12"
+                  disabled={isSubmitting}
+                  className="w-full bg-altamentis-sky text-white font-bold hover:shadow-[0_0_20px_rgba(68,204,228,0.4)] transition-all duration-300 h-12 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
+
+                {submitStatus && (
+                  <p
+                    className={`text-sm text-center ${
+                      submitStatus.type === "success"
+                        ? "text-green-600"
+                        : "text-red-600"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </p>
+                )}
 
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -273,7 +329,7 @@ export default function ContactPage() {
                 </div>
 
                 <a
-                  href="https://cal.com/altamentis"
+                  href="https://calendly.com/chandrus-altamentis/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center bg-white border-2 border-altamentis-sky text-altamentis-sky font-bold rounded-md px-4 py-3 hover:bg-altamentis-sky/5 transition-all duration-300"

@@ -84,7 +84,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="https://cal.com/altamentis"
+              href="https://calendly.com/chandrus-altamentis/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block bg-altamentis-sky text-white font-bold rounded-full px-6 py-2 hover:shadow-[0_0_20px_rgba(68,204,228,0.4)] transition-all duration-300"
@@ -173,7 +173,7 @@ export function Navbar() {
                 {/* Mobile Menu CTA */}
                 <div className="p-4 border-t border-gray-200 safe-bottom">
                   <a
-                    href="https://cal.com/altamentis"
+                    href="https://calendly.com/chandrus-altamentis/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={closeMenu}
