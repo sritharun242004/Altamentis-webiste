@@ -139,7 +139,7 @@ export async function POST(request: Request) {
     const html = buildEmailHtml({ name, email, phone, message });
 
     const { error } = await resend.emails.send({
-      from: "AltaMentis Contact Form <onboarding@resend.dev>",
+      from: "AltaMentis Contact Form <noreply@altamentis.in>",
       to: "chandrus@altamentis.in",
       cc: "info@altamentis.in",
       replyTo: email,
