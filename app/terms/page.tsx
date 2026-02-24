@@ -19,7 +19,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">1. Agreement to Terms</h2>
             <p>
-              By accessing or using the website of AltaMentis Technology Solutions (OPC) Private Limited (&quot;AltaMentis&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) at altamentis.in, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website or services.
+              By accessing or using the website of AltaMentis Technology Solutions (&quot;AltaMentis&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) at altamentis.in, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website or services.
             </p>
           </section>
 
@@ -45,7 +45,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">4. Intellectual Property</h2>
             <p>
-              All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of AltaMentis Technology Solutions (OPC) Private Limited and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content without our prior written consent.
+              All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of AltaMentis Technology Solutions and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content without our prior written consent.
             </p>
           </section>
 
@@ -107,7 +107,7 @@ export default function TermsPage() {
               If you have any questions about these Terms and Conditions, please contact us:
             </p>
             <div className="mt-3 bg-gray-50 border border-gray-200 rounded-xl p-5 text-sm space-y-1">
-              <p className="font-semibold text-gray-900">AltaMentis Technology Solutions (OPC) Private Limited</p>
+              <p className="font-semibold text-gray-900">AltaMentis Technology Solutions</p>
               <p>H1-101, Shriram Shankari Towers, Chennai, India</p>
               <p>
                 Email:{" "}

@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">1. Introduction</h2>
             <p>
-              AltaMentis Technology Solutions (OPC) Private Limited (&quot;AltaMentis&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at altamentis.in or engage with our services.
+              AltaMentis Technology Solutions (&quot;AltaMentis&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at altamentis.in or engage with our services.
             </p>
           </section>
 
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
             </p>
             <div className="mt-3 bg-gray-50 border border-gray-200 rounded-xl p-5 text-sm space-y-1">
-              <p className="font-semibold text-gray-900">AltaMentis Technology Solutions (OPC) Private Limited</p>
+              <p className="font-semibold text-gray-900">AltaMentis Technology Solutions</p>
               <p>H1-101, Shriram Shankari Towers, Chennai, India</p>
               <p>
                 Email:{" "}
