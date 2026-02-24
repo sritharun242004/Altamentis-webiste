@@ -137,8 +137,8 @@ export default function PrivacyPolicyPage() {
               </p>
               <p>
                 Phone:{" "}
-                <a href="tel:+917200106280" className="text-altamentis-sky hover:underline">
-                  +91 72001 06280
+                <a href="tel:+919600653863" className="text-altamentis-sky hover:underline">
+                  +91 96006 53863
                 </a>
               </p>
             </div>

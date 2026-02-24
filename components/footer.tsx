@@ -47,10 +47,10 @@ export function Footer() {
               <div className="flex items-center space-x-3 text-white/90">
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <a
-                  href="tel:+917200106280"
+                  href="tel:+919600653863"
                   className="hover:text-white transition-colors text-sm"
                 >
-                  +91 72001 06280
+                  +91 96006 53863
                 </a>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function Footer() {
                   <Mail className="w-5 h-5 text-white" />
                 </a>
                 <a
-                  href="tel:+917200106280"
+                  href="tel:+919600653863"
                   className="w-11 h-11 rounded-lg bg-white/20 hover:bg-white/30 active:bg-white/40 flex items-center justify-center transition-colors touch-manipulation"
                   aria-label="Phone"
                 >
@@ -155,7 +155,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="text-white/90 text-xs md:text-sm text-center">
-            ©{new Date().getFullYear()} ALTAMENTIS TECHNOLOGY SOLUTIONS (OPC) PRIVATE LIMITED . All rights reserved.
+            ©{new Date().getFullYear()} ALTAMENTIS TECHNOLOGY SOLUTIONS. All rights reserved.
           </p>
         </div>
       </div>
