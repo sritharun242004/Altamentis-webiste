@@ -68,6 +68,54 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plusJakarta.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AltaMentis Technologies",
+              url: "https://altamentis.in",
+              logo: "https://altamentis.in/og-image.png",
+              description:
+                "AltaMentis Technologies specializes in high-end SAP S/4HANA consulting, BTP integration, and innovative Agentic AI solutions for enterprise digital transformation.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "H1-101, Shriram Shankari Towers",
+                addressLocality: "Chennai",
+                addressRegion: "Tamil Nadu",
+                addressCountry: "IN",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-9600653863",
+                contactType: "customer service",
+                email: "info@altamentis.in",
+                availableLanguage: ["English"],
+              },
+              sameAs: [],
+              foundingLocation: {
+                "@type": "Place",
+                name: "Chennai, India",
+              },
+              serviceArea: {
+                "@type": "GeoCircle",
+                geoMidpoint: {
+                  "@type": "GeoCoordinates",
+                  latitude: 12.8933,
+                  longitude: 80.1472,
+                },
+              },
+              knowsAbout: [
+                "SAP S/4HANA",
+                "SAP BTP",
+                "Agentic AI",
+                "Enterprise Digital Transformation",
+                "SAP Consulting",
+              ],
+            }),
+          }}
+        />
         <Navbar />
         <main className="min-h-screen pt-20">{children}</main>
         <Footer />
